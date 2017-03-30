@@ -4,14 +4,14 @@ const webpack = require('webpack')
 const HtmlPlugin = require('html-webpack-plugin')
 const paths = require('./paths')
 
-let publicPath = '/'
+let publicPath = './'
 
 module.exports = {
   entry: [paths.appIndexJs],
   output: {
     path: paths.appBuild,
     pathinfo: true,
-    filename: 'static/js/bundle.js',
+    filename: '[hash].bundle.js',
     publicPath: publicPath
   },
   resolve: {
