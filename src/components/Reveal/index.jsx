@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Reveal from 'reveal.js'
 import 'reveal.js/css/reveal.css'
+import './theme.scss'
 
 class ReactReveal extends Component {
 
