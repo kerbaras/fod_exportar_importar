@@ -1,6 +1,7 @@
 import React from 'react'
 import Reveal from './Reveal'
 import Slides from './Slides'
+import './App.scss'
 
 const App = () => (
     <app>
