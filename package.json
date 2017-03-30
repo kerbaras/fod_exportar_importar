@@ -5,8 +5,8 @@
   "main": "src/index.html",
   "scripts": {
     "start": "node scripts/start.js",
-    "webpack": "webpack --config ./config/webpack.config.js --progress --colors",
-    "webpack:watch": "webpack --config ./config/webpack.config.js --progress --colors --watch",
+    "webpack": "webpack --config ./config/webpack.config.js",
+    "webpack:watch": "webpack --config ./config/webpack.config.js --watch",
     "serve": "lite-server --baseDir='build'",
     "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,6 +25,7 @@
   "dependencies": {
     "lite-server": "^2.3.0",
     "normalize.css": "^6.0.0",
+    "prismjs": "^1.6.0",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-addons-transition-group": "^15.4.2",

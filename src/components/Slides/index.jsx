@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import Reveal from 'reveal.js'
 import Slide from '../Slide'
+import HomeSlide from './Home'
+import ProgramSlide from './Program'
 
 
 const Slides = () => (
     <div className="slides">
-        <Slide>
-            <h1>Hola</h1>
-        </Slide>
+        <HomeSlide />
+        <ProgramSlide />
         <Slide>
             <h1>Hola</h1>
         </Slide>
