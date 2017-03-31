@@ -1,9 +1,6 @@
 import React from 'react'
-import Prism from 'prismjs'
-import 'prismjs/components/prism-pascal';
-import 'prismjs/themes/prism.css';
-//import 'prismjs/themes/prism-dark.css';
 import Slide from '../../Slide'
+import Prism from '../../Prism'
 
 let code = `program exportImport;
 type
@@ -14,10 +11,11 @@ type
 
     FAlumno = file of TAlumno;
 `
+        //<pre dangerouslySetInnerHTML={{__html: Prism.highlight(code, Prism.languages.pascal) }} />
 
 const Program = () =>(
     <Slide>
-        <pre dangerouslySetInnerHTML={{__html: Prism.highlight(code, Prism.languages.pascal) }} />
+       <Prism lineNumbers={true} language='pascal'>{ code }</Prism>
     </Slide>
 )
 

@@ -1,0 +1,10 @@
+
+pre {
+    overflow: auto;
+
+    &.line-numbers {
+        code {
+            overflow: visible;
+        }
+    }
+}
