@@ -1,10 +1,66 @@
+@import './material.scss';
 
 pre {
-    overflow: auto;
+    display: flex!important;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    align-content: stretch;
+    border: none!important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+    padding: 0!important;
+    font-family: 'Fira Code', 'Source Code Pro', monospace!important;
+    font-variant-ligatures: contextual;
+    background: #FAFAFA!important;
+    border-radius: 3px;
+    color: #212121;
+    font-size: 50%!important;
+    text-align: justify;
+    box-sizing: border-box;
+    width: auto!important;
+    max-height: 85vh;
+    overflow: hidden!important;
+
+    code {
+        display: flex;
+        flex: 1 0 auto;
+        border-radius: 0 3px 3px 0;
+        line-height: 1.5em!important;
+        padding: 0.5em!important;
+        overflow: visible!important;
+        max-height: 100%!important;
+    }
 
     &.line-numbers {
+        counter-reset: linenumber;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            background-color: #2196F3;
+            border-radius: 3px 0 0 3px;
+            color: #fff;
+            float: left;
+            line-height: 1.5em;
+            list-style: none;
+            margin: 0;
+            min-width: 2.5em;
+            padding: 0.5em;
+            text-align: right;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            li{
+                counter-increment: linenumber;
+
+                &::before{
+                    content: counter(linenumber);
+                }
+            }
+        }
         code {
-            overflow: visible;
+            
         }
     }
 }

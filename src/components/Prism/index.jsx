@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Prism from 'prismjs'
+
 import 'prismjs/components/prism-pascal.js'
-import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
-import 'prismjs/themes/prism.css'
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+//import 'prismjs/themes/prism.css'
+import './line-numbers'
 import './theme.scss'
 
 class PrismComponent extends Component {
@@ -28,7 +28,7 @@ class PrismComponent extends Component {
 
     render(){
         return (
-            <pre className={this.genPreClasses()} ref={ block => this.block = block }>
+            <pre start={this.props.start || 1} className={this.genPreClasses()} ref={ block => this.block = block }>
                 <code className={`language-${this.props.language}`} >
                     { this.props.children }
                 </code>
