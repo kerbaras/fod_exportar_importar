@@ -35,7 +35,7 @@ begin
     while not(EOF(A)) do begin
         read(A, reg);
         writeln(T, reg.nombre);
-        writeln(T, reg.fechaVto, ' ',  reg.stock, ' ', reg.presentacion);
+        writeln(T, reg.fechaVto, ' ', reg.stock, ' ', reg.presentacion);
     end;
     close(A);
     close(T);
@@ -65,15 +65,15 @@ begin
 [`        Case menu() of
             1: begin  { Importacion }
                 writeln;
-                assign(A, 'c:\medicamentos');
-                assign(T, 'c:\carga.txt');
+                assign(A, 'c:\\medicamentos');
+                assign(T, 'c:\\carga.txt');
                 importar(A, T);
                 writeln('Importacion exitosa.');
             end;
             2: begin  { Exportacion }
                 writeln;
-                assign(A, 'c:\medicamentos');
-                assign(T2, 'c:\salida.txt');
+                assign(A, 'c:\\medicamentos');
+                assign(T2, 'c:\\salida.txt');
                 exportar(A, T2);
                 writeln('Exportacion exitosa.');
             end;

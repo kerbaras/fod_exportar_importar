@@ -33,7 +33,7 @@ begin
     while not(EOF(A)) do begin
         read(A, reg);
         writeln(T, reg.nombre);
-        writeln(T, reg.fechaVto, ' ',  reg.stock, ' ', reg.presentacion);
+        writeln(T, reg.fechaVto, ' ', reg.stock, ' ', reg.presentacion);
     end;
     close(A);
     close(T);
