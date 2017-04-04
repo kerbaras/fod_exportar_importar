@@ -15807,7 +15807,7 @@ var Slides = function Slides() {
         _react2.default.createElement(_Program2.default, null),
         _react2.default.createElement(
             _Slide2.default,
-            null,
+            { color: '#2962FF' },
             _react2.default.createElement(
                 'header',
                 null,
