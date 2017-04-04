@@ -13,7 +13,7 @@ const Slides = () => (
         <TextFileSlide />
         <FileSlide />
         <ProgramSlide />
-        <Slide>
+        <Slide color="#2962FF">
             <header>
                 <h1>Preguntas?</h1>
             </header>
