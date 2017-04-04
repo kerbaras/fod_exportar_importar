@@ -1,5 +1,5 @@
 export default [
-`program Medicamentos;
+[`program Medicamentos;
 
 Type
 	medicamento = record
@@ -10,8 +10,8 @@ Type
 
 	archivo_medicamentos = file of medicamento;
 
-`, `
-procedure importar (VAR A: archivo_medicamentos; VAR T: text);
+`,0],
+[`procedure importar (VAR A: archivo_medicamentos; VAR T: text);
 var
     reg: medicamento;
 begin
@@ -25,8 +25,8 @@ begin
     close(T);
     close(A);
 end;
-`,
-`procedure exportar (VAR A: archivo_medicamentos; VAR T: text);
+`, 11],
+[`procedure exportar (VAR A: archivo_medicamentos; VAR T: text);
 var
     reg: medicamento;
 begin
@@ -40,8 +40,8 @@ begin
     close(A);
     close(T);
 end;
-`,`
-function menu(): Byte;
+`, 11+14],
+[`function menu(): Byte;
 var aux: Byte;
 begin
      writeln;
@@ -52,16 +52,17 @@ begin
      readln(aux);
      menu := aux;
 end;
-`,
-`var
+`, 11 + 14*2],
+[`var
    A: archivo_medicamentos;
    T, T2: text;
    salir: boolean;
 begin
      writeln('MEDICAMENTOS');
      salir := false;
-     Repeat`,
-`        Case menu() of
+     Repeat
+`, (11 + 14)*2],
+[`        Case menu() of
             1: begin  { Importacion }
                 writeln;
                 assign(A, 'c:\medicamentos');
@@ -79,4 +80,5 @@ begin
             0: salir := true;
         end;
      until salir;
-end.`]
+end.
+`,(11 + 14)*2+8]]

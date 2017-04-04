@@ -3,9 +3,9 @@ import Slide from '../../Slide'
 import CodeBlock from '../../CodeBlock'
 import program from './programa'
 
-const mapper = (program) => program.map((code, index) => (
+const mapper = (program) => program.map(([code, offset], index) => (
     <Slide key={index}>
-        <CodeBlock lineNumbers={true} language='pascal'>{ code }</CodeBlock>
+        <CodeBlock startAt={offset + 1} lineNumbers={true} language='pascal'>{ code }</CodeBlock>
     </Slide>)
 )
 

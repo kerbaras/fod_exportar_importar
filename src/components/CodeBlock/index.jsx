@@ -12,8 +12,13 @@ const makeLines = (hasLines, code) => hasLines ? <LineNumbers code={code} /> : n
 
 const createCode = (code, language) => (language ? Highlight.highlight(language, code, false).value : code);
 
-const CodeBlock = ({ children: code, language, lineNumbers, fontSize }) => (
-    <pre className={lineNumbers ? "line-numbers" : null} style={{fontSize}}>
+const style = (fontSize, startAt=1) => ({
+    fontSize,
+    counterReset: 'linenumber ' + (parseInt(startAt, 10) - 1)
+})
+
+const CodeBlock = ({ children: code, language, lineNumbers, fontSize, startAt }) => (
+    <pre className={lineNumbers ? "line-numbers" : null} style={style(fontSize, startAt)}>
         { makeLines(lineNumbers, code) }
         <code  style={{fontSize}} dangerouslySetInnerHTML={{ __html: createCode(code, language)}} />
     </pre>
