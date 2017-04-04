@@ -1,8 +1,9 @@
+@import '~react-md/src/scss/react-md';
 @import './material.scss';
 
 pre {
     display: flex!important;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: stretch;
     align-content: stretch;
     border: none!important;
@@ -21,6 +22,7 @@ pre {
     overflow: hidden!important;
 
     code {
+        font-family: 'Fira Code', 'Source Code Pro', monospace!important;
         display: flex;
         flex: 1 0 auto;
         border-radius: 0 3px 3px 0;

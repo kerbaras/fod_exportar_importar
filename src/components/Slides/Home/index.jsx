@@ -1,10 +1,13 @@
 import React from 'react'
 import Slide from '../../Slide'
+import './style.scss'
 
 const Home = () =>(
     <Slide>
-        <h1>Archivos</h1>
-        <h2>Extraer - Importar</h2>
+        <header>
+                <h1>Archivos</h1>
+                <h2>Exportar - Importar</h2>
+        </header>
     </Slide>
 )
 

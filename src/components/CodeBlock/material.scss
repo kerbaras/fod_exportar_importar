@@ -1,0 +1,87 @@
+@import '~react-md/src/scss/react-md';
+code {
+	&,
+	.hljs-subst {
+		color: $md-grey-900;
+	}
+	/* Material Red */
+	.hljs-deletion,
+	.hljs-formula,
+	.hljs-keyword,
+	.hljs-link,
+	.hljs-selector-tag {
+		color: $md-indigo-500;
+	}
+	/* Material Blue */
+	.hljs-built_in,
+	.hljs-emphasis,
+	.hljs-name,
+	.hljs-quote,
+	.hljs-strong,
+	.hljs-title,
+	.hljs-variable,
+	.hljs-tag {
+		color: $md-blue-500;
+	}
+	/* Material Yellow */
+	.hljs-attr,
+	.hljs-params,
+	.hljs-template-tag,
+	.hljs-type {
+		color: $md-lime-800;
+	}
+	/* Material Purple */
+	.hljs-builtin-name,
+	.hljs-doctag,
+	.hljs-literal,
+	.hljs-number {
+		color: $md-deep-purple-500;
+	}
+	/* Material Orange */
+	.hljs-code,
+	.hljs-meta,
+	.hljs-regexp,
+	.hljs-selector-id,
+	.hljs-template-variable {
+		color: $md-orange-500;
+	}
+	/* Material Green */
+	.hljs-addition,
+	.hljs-meta-string,
+	.hljs-section,
+	.hljs-selector-attr,
+	.hljs-selector-class,
+	.hljs-string,
+	.hljs-symbol {
+		color: $md-green-500;
+	}
+	/* Material Aqua */
+	.hljs-attribute,
+	.hljs-bullet,
+	.hljs-class,
+	.hljs-function,
+	.hljs-function .hljs-keyword,
+	.hljs-meta-keyword,
+	.hljs-selector-pseudo {
+		color: $md-teal-500;
+	}
+	/* Material Gray */
+	.hljs-comment {
+		color: $md-grey-500;
+	}
+	/* Material Purple */
+	.hljs-link_label,
+	.hljs-literal,
+	.hljs-number {
+		color: $md-purple-500;
+	}
+	.hljs-comment,
+	.hljs-emphasis {
+		font-style: italic;
+	}
+	.hljs-section,
+	.hljs-strong,
+	.hljs-tag {
+		font-weight: bold;
+	}
+}

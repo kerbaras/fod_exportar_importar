@@ -3,16 +3,20 @@ import Reveal from 'reveal.js'
 import Slide from '../Slide'
 import HomeSlide from './Home'
 import FileSlide from './File'
+import TextFileSlide from './TextFile'
 import ProgramSlide from './Program'
 
 
 const Slides = () => (
     <div className="slides">
         <HomeSlide />
-        <ProgramSlide />
+        <TextFileSlide />
         <FileSlide />
+        <ProgramSlide />
         <Slide>
-            <h1>Hola</h1>
+            <header>
+                <h1>Preguntas?</h1>
+            </header>
         </Slide>
     </div>
 )

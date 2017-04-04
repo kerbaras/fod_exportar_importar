@@ -8,6 +8,8 @@
 // Default mixins and settings -----------------
 @import "reveal.js/css/theme/template/mixins";
 @import "reveal.js/css/theme/template/settings";
+@import '~react-md/src/scss/react-md';
+
 // ---------------------------------------------
 
 
@@ -24,7 +26,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 200;
-$linkColor: #2196F3;
+$linkColor: $md-blue-500;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
@@ -36,6 +38,29 @@ $heading4Size: 1.0em;
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
 		color: #fff;
+	}
+}
+
+
+section {
+	header {
+		text-align: left;
+
+		& > h1, & > h2{
+			margin: 0!important;
+			padding: 0!important;
+			display: table;
+			clear: both;
+		}
+
+		& > h1{
+			border-bottom: 10px solid $md-blue-500!important;
+		}
+    	& > h2{
+			margin-top: -10px!important;
+        	border-top: 10px solid $md-blue-500!important;
+			padding: 20px 0!important;
+    	}
 	}
 }
 

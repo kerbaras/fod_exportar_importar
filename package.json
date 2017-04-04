@@ -23,6 +23,7 @@
   "author": "Matías Pierobón <matias.pierobonm@gmail.com> (https://matias-pierobon.github.io/)",
   "license": "GPL-3.0",
   "dependencies": {
+    "highlight.js": "^9.10.0",
     "lite-server": "^2.3.0",
     "normalize.css": "^6.0.0",
     "prismjs": "^1.6.0",

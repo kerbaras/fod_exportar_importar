@@ -1,20 +1,30 @@
 import React from 'react'
-import Paper from 'react-md/lib/Papers';
 import Slide from '../../Slide'
+import CodeBlock from '../../CodeBlock'
 
-const Fragment = ({ index, children, type }) => (
-    <span className={"fragment " + type}>
-        { children }
-    </span>
-)
+let code = `<span class="fragment highlight-green">ibuprofeno</span><span class="fragment fade-in">⤶</span>
+<span class="fragment highlight-blue">20181015</span> <span class="fragment highlight-blue">100</span> <span class="fragment highlight-green">ibuprofeno 400 mg. Cápsulas blandas.</span><span class="fragment fade-in">⤶</span> 
+ibuprofeno
+20170819 200 ibuprofeno 600 mg.
+Ácido acetilsalicílico
+20171222 256 Comprimidos: 100-500 mg.
+lidocaina
+20190505 23 Forma típica: 2-4% (clorhidrato).
+lidocaina
+20190515 10 Inyección: 1%; 2% (clorhidrato) en viales.
+atropina
+20180322 21 Inyección: 1 mg (sulfato) en ampollas de 1 ml.
+paracetamol
+20171108 8 Comprimidos: 100-500 mg.
+paracetamol
+20171008 5 Líquido oral: 125 mg/5 ml.
+`
+        //<pre dangerouslySetInnerHTML={{__html: Prism.highlight(code, Prism.languages.pascal) }} />
 
-const File = () =>(
+const FileComponent = () =>(
     <Slide>
-        <Paper zDepth={1}>
-            <Fragment type="highlight-blue">45</Fragment><Fragment type="highlight-red"> </Fragment><Fragment type="highlight-blue">1234</Fragment><Fragment type="highlight-red"> </Fragment><Fragment type="highlight-green">Hola mundo!</Fragment><Fragment type="highlight-red fade-in">\n</Fragment><br />
-            <Fragment type="highlight-green">Soy Matías Pierobón</Fragment><Fragment type="fade-in highlight-red">\n</Fragment><br />
-        </Paper>
+       <CodeBlock lineNumbers={true} >{ code }</CodeBlock>
     </Slide>
 )
 
-export default File
+export default FileComponent

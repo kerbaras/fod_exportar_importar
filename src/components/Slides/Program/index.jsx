@@ -1,22 +1,17 @@
 import React from 'react'
 import Slide from '../../Slide'
-import Prism from '../../Prism'
+import CodeBlock from '../../CodeBlock'
+import program from './programa'
 
-let code = `import React from 'react'
-
-const App = () => (
-    <app>
-        <h1>Hola</h1>
-    </app>
+const mapper = (program) => program.map((code, index) => (
+    <Slide key={index}>
+        <CodeBlock lineNumbers={true} language='pascal'>{ code }</CodeBlock>
+    </Slide>)
 )
 
-export default App
-`
-        //<pre dangerouslySetInnerHTML={{__html: Prism.highlight(code, Prism.languages.pascal) }} />
-
-const Program = () =>(
+const Program = () => (
     <Slide>
-       <Prism lineNumbers={true} language='javascript'>{ code }</Prism>
+       { mapper(program) }
     </Slide>
 )
 

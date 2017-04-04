@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Slide = ({ children }) => (
-    <section>
+const Slide = ({ children, color }) => (
+    <section data-background-color={color}>
         { children }
     </section>
 )
