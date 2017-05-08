@@ -2,7 +2,7 @@ import React from 'react'
 import Slide from '../../Slide'
 import './style.scss'
 
-const Home = () =>(
+const Home = () => (
     <Slide>
         <header>
                 <h1>Archivos</h1>
